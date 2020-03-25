@@ -10,7 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     Button btn;
-    Animation fadeout;
+    Animation sequential;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,8 +21,9 @@ public class MainActivity extends AppCompatActivity {
         if we get the animation then we write a method
         AnimationUtil.loadAnimation(getApplicationContext(),R.anim.our animation xml file name)
         */
-        fadeout = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.sequential);
+        sequential = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.sequential);
 
-        btn.startAnimation(fadeout);
+        btn.startAnimation(sequential);
+
     }
 }
